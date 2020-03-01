@@ -1,0 +1,41 @@
+<%= form_with model: @mac, local: true do |f| %>
+  <section class="mac question1">
+    <h1>MacBook</h1>
+    <div class="labels">
+      <label><%= f.radio_button :spec, 1 %>Macbook Air</label>
+      <label><%= f.radio_button :spec, 2 %>MacBook Pro 13inch</label>
+      <label><%= f.radio_button :spec, 3 %>MacBook Pro 15-16inch</label>
+    </div>
+    <%= f.submit 'NEXT', class: :button %>
+  </section>
+
+  <section class="mac question2">
+    <h1>CPU</h1>
+    <div class="labels">
+      <label><%= f.radio_button :cpu, 1 %>Intel Core i5</label>
+      <label><%= f.radio_button :cpu, 2 %>Intel Core i7</label>
+    </div>
+    <%= f.submit 'NEXT', class: :button %>
+  </section>
+
+  <section class="mac question3">
+      <h1>Memory</h1>
+    <div class="labels">
+      <label><%= f.radio_button :memory, 1 %>8GB</label>
+      <label><%= f.radio_button :memory, 2 %>16GB</label>
+    </div>
+    <%= f.submit 'NEXT', class: :button %>
+  </section>
+
+  <section class="mac question4">
+      <h1>Storage</h1>
+    <div class="labels">
+      <label><%= f.radio_button :storage, 1 %>128GB</label>
+      <label><%= f.radio_button :storage, 2 %>256GB</label>
+      <label><%= f.radio_button :storage, 3 %>512GB</label>
+      <label><%= f.radio_button :storage, 4 %>1TB</label>
+      <label><%= f.radio_button :storage, 5 %>2TB</label>
+    </div>
+    <%= f.submit 'NEXT', class: :button %>
+  </section>
+<% end %>
