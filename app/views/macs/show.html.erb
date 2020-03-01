@@ -1,0 +1,12 @@
+<div class="contain">
+<%= bar_chart @macbook, library: { legend: { labels: { fontSize: 24 } } }, height: "300px", width: "67%" %>
+</div>
+
+
+<div class="container">
+<%= pie_chart ({ "core5": @air.where(cpu: 1).count, "core7": @air.where(cpu: 2).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "33%" %>
+
+<%= pie_chart ({ "8GB": @air.where(memory: 1).count, "16GB": @air.where(memory: 2).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "33%" %>
+
+<%= pie_chart ({ "128GB": @air.where(storage: 1).count, "256GB": @air.where(storage: 2).count, "512GB": @air.where(storage: 3).count, "1TB": @air.where(storage: 4).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "33%" %>
+</div>
