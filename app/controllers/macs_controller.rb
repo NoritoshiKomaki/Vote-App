@@ -1,6 +1,5 @@
 class MacsController < ApplicationController
   def index
-    
   end
 
   def new
