@@ -3,92 +3,99 @@
     <div class="mac que1 display">
       <h1>MacBook</h1>
       <div class="labels">
-        <label><%= f.radio_button :spec, 1 %>Macbook Air</label>
-        <label><%= f.radio_button :spec, 2 %>MacBook Pro 13inch</label>
-        <label><%= f.radio_button :spec, 3 %>MacBook Pro 15-16inch</label>
+        <label class="lab1"><%= f.radio_button :spec, 1 %>Macbook Air</label>
+        <label class="lab2"><%= f.radio_button :spec, 2 %>MacBook Pro 13inch</label>
+        <label class="lab3"><%= f.radio_button :spec, 3 %>MacBook Pro 15-16inch</label>
       </div>
       <span class="button">NEXT</span>
     </div>
-
+<%# 13inch cpu %>
     <div class="mac que2">
         <h1>CPU</h1>
       <div class="labels">
-        <label><%= f.radio_button :cpu, 1 %>Intel Core i5</label>
-        <label><%= f.radio_button :cpu, 2 %>Intel Core i7</label>
+        <label class="lab4"><%= f.radio_button :cpu, 1 %>Intel Core i5</label>
+        <label class="lab4"><%= f.radio_button :cpu, 2 %>Intel Core i7</label>
       </div>
       <span class="button">NEXT</span>
     </div>
-
+<%# 16inch cpu %>
     <div class="mac que3">
         <h1>CPU</h1>
       <div class="labels">
-        <label><%= f.radio_button :cpu, 1 %>Intel Core i7</label>
-        <label><%= f.radio_button :cpu, 2 %>Intel Core i9</label>
+        <label class="lab6"><%= f.radio_button :cpu, 1 %>Intel Core i7</label>
+        <label class="lab6"><%= f.radio_button :cpu, 2 %>Intel Core i9</label>
       </div>
       <span class="button">NEXT</span>
     </div>
-
+<%# air memory %>
     <div class="mac que4">
         <h1>MEMORY</h1>
       <div class="labels">
-        <label><%= f.radio_button :memory, 1 %>8GB</label>
-        <label><%= f.radio_button :memory, 2 %>16GB</label>
+        <label class="lab8"><%= f.radio_button :memory, 1 %>8GB</label>
+        <label class="lab8"><%= f.radio_button :memory, 2 %>16GB</label>
       </div>
       <span class="button">NEXT</span>
     </div>
-
+<%# 13inch memory %>
     <div class="mac que5">
         <h1>MEMORY</h1>
       <div class="labels">
-        <label><%= f.radio_button :memory, 1 %>8GB</label>
-        <label><%= f.radio_button :memory, 2 %>16GB</label>
+        <label class="lab10"><%= f.radio_button :memory, 1 %>8GB</label>
+        <label class="lab10"><%= f.radio_button :memory, 2 %>16GB</label>
       </div>
       <span class="button">NEXT</span>
     </div>
-  
+<%# 16inch memory %>
     <div class="mac que6">
       <h1>MEMORY</h1>
       <div class="labels">
-        <label><%= f.radio_button :memory, 1 %>16GB</label>
-        <label><%= f.radio_button :memory, 2 %>32GB</label>
-        <label><%= f.radio_button :memory, 2 %>64GB</label>
+        <label class="lab12"><%= f.radio_button :memory, 1 %>16GB</label>
+        <label class="lab12"><%= f.radio_button :memory, 2 %>32GB</label>
+        <label class="lab12"><%= f.radio_button :memory, 3 %>64GB</label>
       </div>
       <span class="button">NEXT</span>
     </div>
-  
+<%# air storage %>
     <div class="mac que7">
         <h1>STORAGE</h1>
       <div class="labels">
-        <label><%= f.radio_button :storage, 1 %>128GB</label>
-        <label><%= f.radio_button :storage, 2 %>256GB</label>
-        <label><%= f.radio_button :storage, 3 %>512GB</label>
-        <label><%= f.radio_button :storage, 4 %>1TB</label>
+        <label class="lab15"><%= f.radio_button :storage, 1 %>128GB</label>
+        <label class="lab15"><%= f.radio_button :storage, 2 %>256GB</label>
+        <label class="lab15"><%= f.radio_button :storage, 3 %>512GB</label>
+        <label class="lab15"><%= f.radio_button :storage, 4 %>1TB</label>
       </div>
       <span class="button">NEXT</span>
     </div>
-
+<%# 13inch storage %>
     <div class="mac que8">
         <h1>STORAGE</h1>
       <div class="labels">
-        <label><%= f.radio_button :storage, 1 %>128GB</label>
-        <label><%= f.radio_button :storage, 2 %>256GB</label>
-        <label><%= f.radio_button :storage, 3 %>512GB</label>
-        <label><%= f.radio_button :storage, 4 %>1TB</label>
-        <label><%= f.radio_button :storage, 5 %>2TB</label>
+        <label class="lab19"><%= f.radio_button :storage, 1 %>128GB</label>
+        <label class="lab19"><%= f.radio_button :storage, 2 %>256GB</label>
+        <label class="lab19"><%= f.radio_button :storage, 3 %>512GB</label>
+        <label class="lab19"><%= f.radio_button :storage, 4 %>1TB</label>
+        <label class="lab19"><%= f.radio_button :storage, 5 %>2TB</label>
+      </div>
+      <span class="button">NEXT</span>
+    </div>
+<%# 16inch storage %>
+    <div class="mac que9">
+        <h1>STORAGE</h1>
+      <div class="labels">
+        <label class="lab24"><%= f.radio_button :storage, 1 %>512GB</label>
+        <label class="lab24"><%= f.radio_button :storage, 2 %>1TB</label>
+        <label class="lab24"><%= f.radio_button :storage, 3 %>2TB</label>
+        <label class="lab24"><%= f.radio_button :storage, 4 %>4TB</label>
+        <label class="lab24"><%= f.radio_button :storage, 5 %>8TB</label>
       </div>
       <span class="button">NEXT</span>
     </div>
 
-    <div class="mac que9">
-        <h1>STORAGE</h1>
+    <div class="mac que10">
       <div class="labels">
-        <label><%= f.radio_button :storage, 1 %>512GB</label>
-        <label><%= f.radio_button :storage, 2 %>1TB</label>
-        <label><%= f.radio_button :storage, 3 %>2TB</label>
-        <label><%= f.radio_button :storage, 4 %>4TB</label>
-        <label><%= f.radio_button :storage, 5 %>8TB</label>
+        <h2>THANK YOU</h2>
       </div>
-      <span class="button">NEXT</span>
+      <%= f.submit "SEND", class: "button" %>
     </div>
 
   </section>

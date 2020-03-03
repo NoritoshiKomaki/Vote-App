@@ -5,6 +5,10 @@
   align-items: center;
 }
 
+input[type=radio] {
+  display: none; /* ラジオボタンを非表示にする */
+  }
+
 .mac {
   border: 3px solid blue;
   border-radius: 50px;

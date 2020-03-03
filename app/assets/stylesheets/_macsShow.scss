@@ -1,10 +1,27 @@
 .contain {
-  margin-top: 50px;
+  margin-top: 30px;
   display: flex;
   justify-content: center;
 }
 
+.mac-title {
+  display: flex;
+  margin: 0 auto;
+  margin-top: 30px;
+  justify-content: center;
+  div {
+    border: 1px solid blue;
+    background: skyblue;
+    padding: 0 10px;
+    border-radius: 50px;
+    font-size: 20px;
+    margin: 0 20px;
+    font-weight: bold;
+  }
+}
+
 .container {
   display: flex;
-  margin-top: 100px;
+  margin-top: 30px;
 }
+
