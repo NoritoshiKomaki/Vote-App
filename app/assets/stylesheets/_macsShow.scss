@@ -1,27 +1,67 @@
-.contain {
-  margin-top: 30px;
+.container {
+  width: 33%;
+}
+
+.chart-flex {
+  height: 330px;
   display: flex;
   justify-content: center;
 }
 
-.mac-title {
-  display: flex;
+tspan {
+  font-size: 16px;
+  font-weight: bold;
+  text-shadow: black 0 0 1px;
+}
+
+.highcharts-background {
+  height: 0;
+}
+
+.center {
+  width: 50%;
+}
+
+.chart-size {
   margin: 0 auto;
-  margin-top: 30px;
+  width: 67%;
+  height: 330px;
+}
+
+.highcharts-root {
+  height: 330px;
+}
+
+.select-button {
+  display: flex;
   justify-content: center;
   div {
-    border: 1px solid blue;
-    background: skyblue;
+    border: 2px solid darkblue;
     padding: 0 10px;
     border-radius: 50px;
+    margin: 20px 10px;
     font-size: 20px;
-    margin: 0 20px;
     font-weight: bold;
+    z-index: 2;
   }
 }
 
-.container {
-  display: flex;
-  margin-top: 30px;
+.crear {
+  display: none;
 }
+
+#btn-air, #btn-13, #btn-16 {
+  cursor: pointer;
+  text-shadow: black 0 0 1px;
+  opacity: 0.7;
+  box-shadow: 0 0 5px #333;
+}
+
+#btn-air:hover, #btn-13:hover, #btn-16:hover {
+  opacity: 1;
+}
+
+
+
+
 

@@ -1,34 +1,34 @@
-
-<div class="contain">
-  <%= bar_chart @macbook, height: "300px", width: "67%" %>
+<%# 棒グラフ %>
+<div class="chart-size">
+  <div id="mac-spec"></div>
 </div>
-
-<div class="mac-title">
-  <div>MacBook Air</div>
-  <div>MacBook Pro 13inch</div>
-  <div>MacBook Pro 15-16inch</div>
+<%# 切り替えボタン %>
+<div class="select-button">
+  <div id="btn-air">Air</div>
+  <div id="btn-13">Pro 13inch</div>
+  <div id="btn-16">Pro 15-16inch</div>
 </div>
-
-<div class="display2">
-  <div class="container">
-    <%= pie_chart ({ "8GB": @air.where(memory: 1).count, "16GB": @air.where(memory: 2).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "50%" %>
-    <%= pie_chart ({ "128GB": @air.where(storage: 1).count, "256GB": @air.where(storage: 2).count, "512GB": @air.where(storage: 3).count, "1TB": @air.where(storage: 4).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "50%" %>
+<%# 円グラフair %>
+<div id="display-air" class="crear">
+  <div class="chart-flex">
+    <div class="container" id="air-memory"></div>
+    <div class="container" id="air-storage"></div>
+  </div>
+</div>
+<%# 円グラフinch13 %>
+<div id="display-inch13" class="crear">
+  <div class="chart-flex">
+    <div class="container" id="inch13-cpu"></div>
+    <div class="container" id="inch13-memory"></div>
+    <div class="container" id="inch13-storage"></div>
+  </div>
+</div>
+<%# 円グラフinch16 %>
+<div id="display-inch16" class="crear">
+  <div class="chart-flex">
+    <div class="container" id="inch16-cpu"></div>
+    <div class="container" id="inch16-memory"></div>
+    <div class="container" id="inch16-storage"></div>
   </div>
 </div>
 
-
-<div class="container">
-<%= pie_chart ({ "core5": @inch13.where(cpu: 1).count, "core7": @inch13.where(cpu: 2).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "30%" %>
-
-<%= pie_chart ({ "8GB": @inch13.where(memory: 1).count, "16GB": @inch13.where(memory: 2).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "30%" %>
-
-<%= pie_chart ({ "128GB": @inch13.where(storage: 1).count, "256GB": @inch13.where(storage: 2).count, "512GB": @inch13.where(storage: 3).count, "1TB": @inch13.where(storage: 4).count, "2TB": @inch13.where(storage: 5).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "40%" %>
-</div>
-
-<div class="container">
-<%= pie_chart ({ "core7": @inch16.where(cpu: 1).count, "core9": @inch16.where(cpu: 2).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "30%" %>
-
-<%= pie_chart ({ "16GB": @inch16.where(memory: 1).count, "32GB": @inch16.where(memory: 2).count, "64GB": @inch16.where(memory: 3).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "30%" %>
-
-<%= pie_chart ({ "512GB": @inch16.where(storage: 1).count, "1TB": @inch16.where(storage: 2).count, "2TB": @inch16.where(storage: 3).count, "4TB": @inch16.where(storage: 4).count, "8TB": @inch16.where(storage: 5).count }), library: { legend: { position: "bottom", labels: { fontSize: 20 } } }, width: "40%" %>
-</div>
