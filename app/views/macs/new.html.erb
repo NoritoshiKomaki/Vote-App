@@ -1,100 +1,109 @@
 <%= form_with model: @mac, local: true do |f| %>
   <section class="back-size">
-    <div class="mac que1 display">
+    <div class="mac display" id="que1">
       <h1>MacBook</h1>
       <div class="labels">
-        <label class="lab1"><%= f.radio_button :spec, 1 %>Macbook Air</label>
-        <label class="lab2"><%= f.radio_button :spec, 2 %>MacBook Pro 13inch</label>
-        <label class="lab3"><%= f.radio_button :spec, 3 %>MacBook Pro 15-16inch</label>
+        <div class="select">ご使用のMacBookを選択して下さい</div>
+        <label id="lab1"><%= f.radio_button :spec, 1 %>MacBook Air</label>
+        <label id="lab2"><%= f.radio_button :spec, 2 %>MacBook Pro 13inch</label>
+        <label id="lab3"><%= f.radio_button :spec, 3 %>MacBook Pro 15-16inch</label>
       </div>
     </div>
 <%# 13inch cpu %>
-    <div class="mac que2">
+    <div class="mac" id="que2">
         <h1>CPU</h1>
       <div class="labels">
+        <div class="select">CPUを選択してください</div>
         <label class="lab4"><%= f.radio_button :cpu, 1 %>Intel Core i5</label>
         <label class="lab4"><%= f.radio_button :cpu, 2 %>Intel Core i7</label>
       </div>
-      <span class="button">BACK</span>
+      <span class="button back1">BACK</span>
     </div>
 <%# 16inch cpu %>
-    <div class="mac que3">
+    <div class="mac" id="que3">
         <h1>CPU</h1>
       <div class="labels">
-        <label class="lab6"><%= f.radio_button :cpu, 1 %>Intel Core i7</label>
-        <label class="lab6"><%= f.radio_button :cpu, 2 %>Intel Core i9</label>
+        <div class="select">CPUを選択してください</div>
+        <label class="lab5"><%= f.radio_button :cpu, 1 %>Intel Core i7</label>
+        <label class="lab5"><%= f.radio_button :cpu, 2 %>Intel Core i9</label>
       </div>
-      <span class="button">BACK</span>
+      <span class="button back1">BACK</span>
     </div>
 <%# air memory %>
-    <div class="mac que4">
+    <div class="mac" id="que4">
         <h1>MEMORY</h1>
       <div class="labels">
-        <label class="lab8"><%= f.radio_button :memory, 1 %>8GB</label>
-        <label class="lab8"><%= f.radio_button :memory, 2 %>16GB</label>
+        <div class="select">MEMORYを選択してください</div>
+        <label class="lab6"><%= f.radio_button :memory, 1 %>8GB</label>
+        <label class="lab6"><%= f.radio_button :memory, 2 %>16GB</label>
       </div>
-      <span class="button">BACK</span>
+      <span class="button back1">BACK</span>
     </div>
 <%# 13inch memory %>
-    <div class="mac que5">
+    <div class="mac" id="que5">
         <h1>MEMORY</h1>
       <div class="labels">
-        <label class="lab10"><%= f.radio_button :memory, 1 %>8GB</label>
-        <label class="lab10"><%= f.radio_button :memory, 2 %>16GB</label>
+        <div class="select">MEMORYを選択してください</div>
+        <label class="lab7"><%= f.radio_button :memory, 1 %>8GB</label>
+        <label class="lab7"><%= f.radio_button :memory, 2 %>16GB</label>
       </div>
-      <span class="button">BACK</span>
+      <span class="button back2">BACK</span>
     </div>
 <%# 16inch memory %>
-    <div class="mac que6">
+    <div class="mac" id="que6">
       <h1>MEMORY</h1>
       <div class="labels">
-        <label class="lab12"><%= f.radio_button :memory, 1 %>16GB</label>
-        <label class="lab12"><%= f.radio_button :memory, 2 %>32GB</label>
-        <label class="lab12"><%= f.radio_button :memory, 3 %>64GB</label>
+        <div class="select">MEMORYを選択してください</div>
+        <label class="lab8"><%= f.radio_button :memory, 1 %>16GB</label>
+        <label class="lab8"><%= f.radio_button :memory, 2 %>32GB</label>
+        <label class="lab8"><%= f.radio_button :memory, 3 %>64GB</label>
       </div>
-      <span class="button">BACK</span>
+      <span class="button back3">BACK</span>
     </div>
 <%# air storage %>
-    <div class="mac que7">
+    <div class="mac" id="que7">
         <h1>STORAGE</h1>
       <div class="labels">
-        <label class="lab15"><%= f.radio_button :storage, 1 %>128GB</label>
-        <label class="lab15"><%= f.radio_button :storage, 2 %>256GB</label>
-        <label class="lab15"><%= f.radio_button :storage, 3 %>512GB</label>
-        <label class="lab15"><%= f.radio_button :storage, 4 %>1TB</label>
+        <div class="select">STORAGEを選択してください</div>
+        <label class="lab9"><%= f.radio_button :storage, 1 %>128GB</label>
+        <label class="lab9"><%= f.radio_button :storage, 2 %>256GB</label>
+        <label class="lab9"><%= f.radio_button :storage, 3 %>512GB</label>
+        <label class="lab9"><%= f.radio_button :storage, 4 %>1TB</label>
       </div>
-      <span class="button">BACK</span>
+      <span class="button back4">BACK</span>
     </div>
 <%# 13inch storage %>
-    <div class="mac que8">
+    <div class="mac" id="que8">
         <h1>STORAGE</h1>
       <div class="labels">
-        <label class="lab19"><%= f.radio_button :storage, 1 %>128GB</label>
-        <label class="lab19"><%= f.radio_button :storage, 2 %>256GB</label>
-        <label class="lab19"><%= f.radio_button :storage, 3 %>512GB</label>
-        <label class="lab19"><%= f.radio_button :storage, 4 %>1TB</label>
-        <label class="lab19"><%= f.radio_button :storage, 5 %>2TB</label>
+        <div class="select">STORAGEを選択してください</div>
+        <label class="lab10"><%= f.radio_button :storage, 1 %>128GB</label>
+        <label class="lab10"><%= f.radio_button :storage, 2 %>256GB</label>
+        <label class="lab10"><%= f.radio_button :storage, 3 %>512GB</label>
+        <label class="lab10"><%= f.radio_button :storage, 4 %>1TB</label>
+        <label class="lab10"><%= f.radio_button :storage, 5 %>2TB</label>
       </div>
-      <span class="button">BACK</span>
+      <span class="button back5">BACK</span>
     </div>
 <%# 16inch storage %>
-    <div class="mac que9">
+    <div class="mac" id="que9">
         <h1>STORAGE</h1>
       <div class="labels">
-        <label class="lab24"><%= f.radio_button :storage, 1 %>512GB</label>
-        <label class="lab24"><%= f.radio_button :storage, 2 %>1TB</label>
-        <label class="lab24"><%= f.radio_button :storage, 3 %>2TB</label>
-        <label class="lab24"><%= f.radio_button :storage, 4 %>4TB</label>
-        <label class="lab24"><%= f.radio_button :storage, 5 %>8TB</label>
+        <div class="select">STORAGEを選択してください</div>
+        <label class="lab11"><%= f.radio_button :storage, 1 %>512GB</label>
+        <label class="lab11"><%= f.radio_button :storage, 2 %>1TB</label>
+        <label class="lab11"><%= f.radio_button :storage, 3 %>2TB</label>
+        <label class="lab11"><%= f.radio_button :storage, 4 %>4TB</label>
+        <label class="lab11"><%= f.radio_button :storage, 5 %>8TB</label>
       </div>
-      <span class="button">BACK</span>
+      <span class="button back6">BACK</span>
     </div>
 
-    <div class="mac que10">
+    <div class="mac" id="que10">
       <div class="labels">
-        <h2>THANK YOU</h2>
+        <h2 class="finish">THANK&nbsp;&nbsp;YOU</h2>
       </div>
-      <%= f.submit "SEND", class: "button" %>
+      <%= f.submit "SEND", class: "button send" %>
     </div>
 
   </section>
