@@ -56,7 +56,7 @@ window.addEventListener('load', function() {
         }());
         Highcharts.chart('inch16-memory', {
             chart: {type: 'pie'},
-            title: {text: 'MEMORY'},
+            title: {text: 'メモリー'},
             exporting : {enabled: false},
             credits: {enabled: false},
             plotOptions: {
@@ -99,7 +99,7 @@ window.addEventListener('load', function() {
         }());
         Highcharts.chart('inch16-storage', {
             chart: {type: 'pie'},
-            title: {text: 'STORAGE'},
+            title: {text: 'ストレージ'},
             exporting : {enabled: false},
             credits: {enabled: false},
             plotOptions: {

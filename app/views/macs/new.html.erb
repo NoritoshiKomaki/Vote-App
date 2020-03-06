@@ -31,9 +31,9 @@
     </div>
 <%# air memory %>
     <div class="mac" id="que4">
-        <h1>MEMORY</h1>
+        <h1>メモリー</h1>
       <div class="labels">
-        <div class="select">MEMORYを選択してください</div>
+        <div class="select">メモリーを選択してください</div>
         <label class="lab6"><%= f.radio_button :memory, 1 %>8GB</label>
         <label class="lab6"><%= f.radio_button :memory, 2 %>16GB</label>
       </div>
@@ -41,68 +41,85 @@
     </div>
 <%# 13inch memory %>
     <div class="mac" id="que5">
-        <h1>MEMORY</h1>
+        <h1>メモリー</h1>
       <div class="labels">
-        <div class="select">MEMORYを選択してください</div>
+        <div class="select">メモリーを選択してください</div>
         <label class="lab7"><%= f.radio_button :memory, 1 %>8GB</label>
         <label class="lab7"><%= f.radio_button :memory, 2 %>16GB</label>
       </div>
-      <span class="button back2">BACK</span>
+      <span class="button" id="back2">BACK</span>
     </div>
 <%# 16inch memory %>
     <div class="mac" id="que6">
-      <h1>MEMORY</h1>
+      <h1>メモリー</h1>
       <div class="labels">
-        <div class="select">MEMORYを選択してください</div>
+        <div class="select">メモリーを選択してください</div>
         <label class="lab8"><%= f.radio_button :memory, 1 %>16GB</label>
         <label class="lab8"><%= f.radio_button :memory, 2 %>32GB</label>
         <label class="lab8"><%= f.radio_button :memory, 3 %>64GB</label>
       </div>
-      <span class="button back3">BACK</span>
+      <span class="button" id="back3">BACK</span>
     </div>
 <%# air storage %>
     <div class="mac" id="que7">
-        <h1>STORAGE</h1>
+        <h1>ストレージ</h1>
       <div class="labels">
-        <div class="select">STORAGEを選択してください</div>
+        <div class="select">ストレージを選択してください</div>
         <label class="lab9"><%= f.radio_button :storage, 1 %>128GB</label>
         <label class="lab9"><%= f.radio_button :storage, 2 %>256GB</label>
         <label class="lab9"><%= f.radio_button :storage, 3 %>512GB</label>
         <label class="lab9"><%= f.radio_button :storage, 4 %>1TB</label>
       </div>
-      <span class="button back4">BACK</span>
+      <span class="button" id="back4">BACK</span>
     </div>
 <%# 13inch storage %>
     <div class="mac" id="que8">
-        <h1>STORAGE</h1>
+        <h1>ストレージ</h1>
       <div class="labels">
-        <div class="select">STORAGEを選択してください</div>
+        <div class="select">ストレージを選択してください</div>
         <label class="lab10"><%= f.radio_button :storage, 1 %>128GB</label>
         <label class="lab10"><%= f.radio_button :storage, 2 %>256GB</label>
         <label class="lab10"><%= f.radio_button :storage, 3 %>512GB</label>
         <label class="lab10"><%= f.radio_button :storage, 4 %>1TB</label>
         <label class="lab10"><%= f.radio_button :storage, 5 %>2TB</label>
       </div>
-      <span class="button back5">BACK</span>
+      <span class="button" id="back5">BACK</span>
     </div>
 <%# 16inch storage %>
     <div class="mac" id="que9">
-        <h1>STORAGE</h1>
+        <h1>ストレージ</h1>
       <div class="labels">
-        <div class="select">STORAGEを選択してください</div>
+        <div class="select">ストレージを選択してください</div>
         <label class="lab11"><%= f.radio_button :storage, 1 %>512GB</label>
         <label class="lab11"><%= f.radio_button :storage, 2 %>1TB</label>
         <label class="lab11"><%= f.radio_button :storage, 3 %>2TB</label>
         <label class="lab11"><%= f.radio_button :storage, 4 %>4TB</label>
         <label class="lab11"><%= f.radio_button :storage, 5 %>8TB</label>
       </div>
-      <span class="button back6">BACK</span>
+      <span class="button" id="back6">BACK</span>
     </div>
 
     <div class="mac" id="que10">
       <div class="labels">
         <h2 class="finish">THANK&nbsp;&nbsp;YOU</h2>
       </div>
+      <span class="button" id="back7">BACK</span>
+      <%= f.submit "SEND", class: "button send" %>
+    </div>
+
+    <div class="mac" id="que11">
+      <div class="labels">
+        <h2 class="finish">THANK&nbsp;&nbsp;YOU</h2>
+      </div>
+      <span class="button" id="back8">BACK</span>
+      <%= f.submit "SEND", class: "button send" %>
+    </div>
+
+    <div class="mac" id="que12">
+      <div class="labels">
+        <h2 class="finish">THANK&nbsp;&nbsp;YOU</h2>
+      </div>
+      <span class="button" id="back9">BACK</span>
       <%= f.submit "SEND", class: "button send" %>
     </div>
 

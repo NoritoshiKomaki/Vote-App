@@ -9,6 +9,8 @@ $(function(){
   var $que8 = $('#que8')
   var $que9 = $('#que9')
   var $que10 = $('#que10')
+  var $que11 = $('#que11')
+  var $que12 = $('#que12')
 
   var $head = $('head')
 
@@ -51,7 +53,7 @@ $(function(){
 // storage選択
   $('.lab10').click(function() {
     $que8.slideUp(300);
-    $que10.delay(300).hide().slideDown();
+    $que11.delay(300).hide().slideDown();
     $head.append('<style>.select::after { width: 100%; } </style>');
   });
                 // ここから16inch
@@ -75,7 +77,7 @@ $(function(){
 // storage選択
   $('.lab11').click(function() {
     $que9.slideUp(300);
-    $que10.delay(300).hide().slideDown();
+    $que12.delay(300).hide().slideDown();
     $head.append('<style>.select::after { width: 100%; } </style>');
   });
 
@@ -85,29 +87,44 @@ $(function(){
     $que1.delay(300).hide().slideDown();
     $head.append('<style>.select::after { width: 0%; } </style>');
   });
-  $('.back2').click(function() {
+  $('#back2').click(function() {
     $que5.slideUp(300);
     $que2.delay(300).hide().slideDown();
     $head.append('<style>.select::after { width: 25%; } </style>');
   });
-  $('.back3').click(function() {
+  $('#back3').click(function() {
     $que6.slideUp(300);
     $que3.delay(300).hide().slideDown();
     $head.append('<style>.select::after { width: 25%; } </style>');
   });
-  $('.back4').click(function() {
+  $('#back4').click(function() {
     $que7.slideUp(300);
     $que4.delay(300).hide().slideDown();
     $head.append('<style>.select::after { width: 33%; } </style>');
   });
-  $('.back5').click(function() {
+  $('#back5').click(function() {
     $que8.slideUp(300);
     $que5.delay(300).hide().slideDown();
-    $head.append('<style>.select::after { width: 55%; } </style>');
+    $head.append('<style>.select::after { width: 50%; } </style>');
   });
-  $('.back6').click(function() {
+  $('#back6').click(function() {
     $que9.slideUp(300);
     $que6.delay(300).hide().slideDown();
-    $head.append('<style>.select::after { width: 55%; } </style>');
+    $head.append('<style>.select::after { width: 50%; } </style>');
+  });
+  $('#back7').click(function() {
+    $que10.slideUp(300);
+    $que7.delay(300).hide().slideDown();
+    $head.append('<style>.select::after { width: 66%; } </style>');
+  });
+  $('#back8').click(function() {
+    $que11.slideUp(300);
+    $que8.delay(300).hide().slideDown();
+    $head.append('<style>.select::after { width: 75%; } </style>');
+  });
+  $('#back9').click(function() {
+    $que12.slideUp(300);
+    $que9.delay(300).hide().slideDown();
+    $head.append('<style>.select::after { width: 75%; } </style>');
   });
 });

@@ -40,7 +40,7 @@ tspan {
 .select-button {
   display: flex;
   justify-content: center;
-  div {
+  .btn {
     border: 2px solid #0000cd;
     padding: 0 20px;
     border-radius: 50px;
@@ -48,6 +48,12 @@ tspan {
     font-size: 24px;
     font-weight: bold;
     z-index: 2;
+  }
+  .far {
+    font-size: 36px;
+    line-height: 80px;
+    color: mediumvioletred;
+    margin-right: 10px;
   }
 }
 
@@ -65,8 +71,3 @@ tspan {
 #btn-air:hover, #btn-13:hover, #btn-16:hover {
   opacity: 1;
 }
-
-
-
-
-
