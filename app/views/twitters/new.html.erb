@@ -1,0 +1,11 @@
+<%= form_with model: @twitter, local: true do |f| %>
+  <section class="back-size">
+    <div class="mac display">
+      <h1>ユーザーID</h1>
+      <div class="select">Twitterでオススメのユーザーを教えてください</div>
+      <div class="b-color">
+        <%= f.text_field :twitter_name, class: "size", placeholder: "@user_id" %>
+      <%= f.submit "SEND", class: "button send" %>
+    </div>
+  </section>
+<% end %>

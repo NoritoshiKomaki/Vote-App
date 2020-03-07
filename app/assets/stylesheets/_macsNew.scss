@@ -87,32 +87,33 @@ input[type=radio] {
     bottom:0;
     margin:auto;
   }
-  .button {
-    display: block;
-    border: 2px solid #0000cd;
-    background: gainsboro;
-    box-shadow: 2px 2px gray;
-    height: 40px;
-    width: 80px;
-    margin: 0 auto;
-    margin-top: 20px;
-    font-size: 20px;
-    border-radius: 7px;
-    text-align: center;
-    line-height: 40px;
-    cursor: pointer;
-  }
-  
-  .button:active {
-    box-shadow: none;
-    position: relative;
-    top: 2px;
-    left: 2px;
-  }
+}
 
-  .button:hover {
-    background: darkgray;
-  }
+.button {
+  display: block;
+  border: 2px solid #0000cd;
+  background: gainsboro;
+  box-shadow: 2px 2px gray;
+  height: 40px;
+  width: 80px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-size: 20px;
+  border-radius: 7px;
+  text-align: center;
+  line-height: 40px;
+  cursor: pointer;
+}
+
+.button:active {
+  box-shadow: none;
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.button:hover {
+  background: darkgray;
 }
 
 .display {
