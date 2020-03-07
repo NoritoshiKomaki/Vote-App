@@ -48,7 +48,7 @@ class MacsController < ApplicationController
 
   private
   def mac_params
-    params.require(:mac).permit(:twitter_name, :cpu, :memory, :storage)
+    params.require(:mac).permit(:spec, :cpu, :memory, :storage)
   end
 
 end
