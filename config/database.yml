@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  database: Vote-App_production
+  username: Vote-App
+  password: <%= ENV['VOTE-APP_DATABASE_PASSWORD'] %>
