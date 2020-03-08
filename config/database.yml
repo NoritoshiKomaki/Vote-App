@@ -50,6 +50,5 @@ test:
 production:
   <<: *default
   database: Vote-App_production
-  username: root
-  password: <%= ENV['DATABASE_PASSWORD'] %>
-  socket: /var/lib/mysql/mysql.sock
+  username: Vote-App
+  password: <%= ENV['Vote-App_DATABASE_PASSWORD'] %>
