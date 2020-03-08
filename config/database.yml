@@ -48,7 +48,5 @@ test:
 #     url: <%= ENV['DATABASE_URL'] %>
 #
 production:
-  <<: *default
-  database: Vote-App_production
-  username: Vote-App
-  password: <%= ENV['VOTE-APP_DATABASE_PASSWORD'] %>
+  adapter: postgresql
+  database: db_production
