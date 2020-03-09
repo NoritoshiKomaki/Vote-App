@@ -6,6 +6,13 @@
 @import "macsShow";
 @import "twittersNew";
 @import "twittersShow";
-@import "login"
+@import "login";
+
+header {
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  background: #1e90ff;
+}
 
 

@@ -1,1 +1,15 @@
-<%= link_to "Twitterでログイン" ,"/auth/twitter", method: :post, class: "login" %>
+<h1 class="title">Welcome</h1>
+<h1 class="title title-middle">to</h1>
+<h1 class="title">VoteApp!!</h1>
+<div class="mac display">
+  <h1>MENU</h1>
+  <div class="labels">
+    <%= link_to  "MacBookのスペック", mac_path(1), class: "login" %>
+    <%= link_to  "Twitterオススメユーザー", twitter_path(1), class: "login" %>
+
+    <div class="vote">
+    <i class="fab fa-twitter"></i>
+    <%= link_to "Twitterでログイン" ,"/auth/twitter", method: :post, class: "login-font" %>
+    </div>
+  </div>
+</div>

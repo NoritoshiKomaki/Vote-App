@@ -11,6 +11,12 @@
   </head>
 
   <body>
+    <% if session[:user_id] %>
+      <header>
+        <p><span><%= @user[:name] %></span>でログイン中</p>
+        <%= link_to "logout" ,:controller => "sessions", :action => "destroy" %>
+      </header>
+    <% end %>
     <%= yield %>
   </body>
 </html>
