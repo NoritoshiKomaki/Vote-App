@@ -71,4 +71,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'jquery-rails'
 gem 'gon'
 gem "font-awesome-sass"
+gem 'dotenv-rails'
+gem 'omniauth-twitter'
+gem "omniauth-rails_csrf_protection"
 
