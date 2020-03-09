@@ -1,3 +1,8 @@
+<% unless session[:user_id] %>
+  <header>
+    <%= link_to "TOPページへ" , login_path %>
+  </header>
+<% end %>
 <section class="shadow">
 <div class="top">
       <div class="body1">Rank</div>

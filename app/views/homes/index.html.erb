@@ -1,6 +1,10 @@
-<h1>Twitter連携</h1>
-<p><%= "ユーザー名:" + @user[:nickname]%></p>
-<p><%= "アカウント名:" + @user[:name]%></p>
-<p><%= "image_url:" + @user[:image_url]%></p>
-<p><%= "description:" + @user[:description]%></p>
-<%= link_to "logout" ,:controller => "sessions", :action => "destroy" %>
+<section class="back-size">
+  <div class="mac display">
+    <h1>投票MENU</h1>
+    <div class="labels">
+      <p>以下を選択してください</p>
+      <%= link_to  "MacBookのスペック", new_mac_path, class: "login" %>
+      <%= link_to  "Twitterオススメユーザー", new_twitter_path, class: "login" %>
+    </div>
+  </div>
+</section>

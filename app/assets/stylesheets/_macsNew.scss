@@ -1,8 +1,10 @@
 .back-size {
-  height: 100vh;
+  height: calc(100vh - 62px);
   width: 100vw;
   display: flex;
   align-items: center;
+  padding-bottom: 62px;
+  box-sizing: border-box;
 }
 
 input[type=radio] {
@@ -22,6 +24,10 @@ input[type=radio] {
   display: none;
   box-shadow: 0 0 15px #333;
   background: ghostwhite;
+  text-align: center;
+  p {
+    margin-bottom: 10px;
+  }
   h1 {
     text-shadow: #333 0 0 1px;
     display: table;

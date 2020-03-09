@@ -1,3 +1,9 @@
+<% unless session[:user_id] %>
+  <header>
+    <%= link_to "TOPページへ" , login_path %>
+  </header>
+<% end %>
+
 <div class="font-change">
   <%# 棒グラフ %>
   <div class="chart-size">
