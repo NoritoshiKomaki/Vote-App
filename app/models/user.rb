@@ -1,4 +1,6 @@
 class User < ApplicationRecord
+  has_many :twitters, dependent: :destroy
+  has_many :twitters, through: :likes
   def self.find_or_create_from_auth(auth)
     provider = auth[:provider]
     uid = auth[:uid]
