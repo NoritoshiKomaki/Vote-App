@@ -9,12 +9,13 @@ class TwittersController < ApplicationController
   end
 
   def show
-    @twitters = Twitter.all
+    @twitters = Twitter.all && Twitter.find(Like.group(:twitter_id).order('count(twitter_id) desc').pluck(:twitter_id))
+    @twitter = Twitter.find_by(id: params[:id])
   end
 
   private
   def twitter_params
-    params.require(:twitter).permit(:name)
+    params.require(:twitter).permit(:name).merge(user_id: session[:user_id])
   end
 
 end

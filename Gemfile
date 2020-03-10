@@ -74,4 +74,4 @@ gem "font-awesome-sass"
 gem 'dotenv-rails'
 gem 'omniauth-twitter'
 gem "omniauth-rails_csrf_protection"
-
+gem 'pry-rails'
