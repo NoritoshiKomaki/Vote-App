@@ -56,16 +56,16 @@ table tr:hover {
 }
 
 .body1, .body2, .body3, .body4 {
-  color: #fff;
+  color: #333;
   padding: 8px 15px;
-  background: #0000cd;
+  background: #1e90ff;
   font-weight: bold;
   border-top:1px solid #666;
   border-bottom:1px solid #666;
   line-height: 120%;
   text-align: center;
   text-shadow: #fff 0 0 1px;
-  box-shadow: 0px 0px 1px #fff inset;
+  box-shadow: 0px 0px 2px #0000cd inset;
   box-sizing: border-box;
 }
 
