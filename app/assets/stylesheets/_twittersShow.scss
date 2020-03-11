@@ -86,13 +86,14 @@ table tr:hover {
 }
 
 .like-btn {
-  color: #8899a6;
-  font-size: 16px;
+  color: white;
+  -webkit-text-stroke: 1px #999;
+  font-size: 20px;
   margin-right: 3px;
 }
 
 .like-btn-unlike {
-  color: #ff2581;
-  font-size: 16px;
+  color: #e0245e;
+  font-size: 20px;
   margin-right: 3px;
 }
