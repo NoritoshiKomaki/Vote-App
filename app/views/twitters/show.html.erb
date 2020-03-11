@@ -4,11 +4,11 @@
   </header>
 <% end %>
 <section class="shadow">
-<div class="top">
-      <div class="body1">Rank</div>
-      <div class="body2">ユーザー名</div>
-      <div class="body3">いいね数</div>
-      <div class="body4">いいね</div>
+  <div class="top">
+    <div class="body1">Rank</div>
+    <div class="body2">ユーザー名</div>
+    <div class="body3">いいね数</div>
+    <div class="body4">いいね</div>
   </div>
   <div class="flow">
   <% i = 0 %>
@@ -21,141 +21,43 @@
         <td class="name-width"><%= twitter.name %></td>
         <td><%= Like.where(twitter_id: twitter.id).count %></td>
         <td>
-          <%if Like.find_by(user_id: @current_user.id,twitter_id: twitter.id)%>
-            <%= link_to("/likes/#{twitter.id}/destroy", {method: "post"}) do %>
-              <span class="fa fa-heart like-btn-unlike"></span>
-            <% end %>
-          <% else %>
-            <%= link_to("/likes/#{twitter.id}/create", {method: "post"}) do %>
-              <span class="fa fa-heart like-btn"></span>
-            <% end %>
-          <% end%>
+        <%if Like.find_by(user_id: @current_user.id,twitter_id: twitter.id)%>
+          <%= link_to("/likes/#{twitter.id}/destroy", {method: "post"}) do %>
+            <span class="fa fa-heart like-btn-unlike"></span>
+          <% end %>
+        <% else %>
+          <%= link_to("/likes/#{twitter.id}/create", {method: "post"}) do %>
+            <span class="fa fa-heart like-btn"></span>
+          <% end %>
+        <% end%>
         </td>
       </tr>
     </tbody>
   </table>
-      <% end %>
-      </section>
-      <%# <tr>
-        <td>2</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>3</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>4</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>6</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>7</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>9</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrtswww</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>10</td>
-        <td>@kmk_non_nrts</td>
-        <td>1234</td>
-        <td>○</td>
-      </tr>
-      <tr>
-        <td>111111</td>
-        <td>wwwwwwwwwwwwwwww</td>
-        <td>111111</td>
-        <td>111111</td>
-      </tr>
-    </tbody>
-  </table> %>
-</div>
+  <% end %>
+
+  <% @twitters2.each do |twitter| %>
+    <% if Like.where(twitter_id: twitter.id).count == 0 %>
+    <table>
+      <tbody>
+        <tr>
+          <td>-</td>
+          <td class="name-width"><%= twitter.name %></td>
+          <td><%= Like.where(twitter_id: twitter.id).count %></td>
+          <td>
+            <%if Like.find_by(user_id: @current_user.id,twitter_id: twitter.id)%>
+              <%= link_to("/likes/#{twitter.id}/destroy", {method: "post"}) do %>
+                <span class="fa fa-heart like-btn-unlike"></span>
+              <% end %>
+            <% else %>
+              <%= link_to("/likes/#{twitter.id}/create", {method: "post"}) do %>
+                <span class="fa fa-heart like-btn"></span>
+              <% end %>
+            <% end%>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <% end %>
+  <% end %>
+</section>
