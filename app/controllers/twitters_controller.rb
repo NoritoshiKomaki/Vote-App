@@ -9,7 +9,7 @@ class TwittersController < ApplicationController
   end
 
   def show
-    @twitters = Twitter.all && Twitter.find(Like.group(:twitter_id).order('count(twitter_id) desc').pluck(:twitter_id))
+    @twitters = Twitter.all
     @twitter = Twitter.find_by(id: params[:id])
   end
 
