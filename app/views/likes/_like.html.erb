@@ -1,0 +1,13 @@
+<div class="like-link" id="like-link-<%= twitter.id %>">
+  <%if Like.find_by(user_id: @current_user.id,twitter_id: twitter.id)%>
+    <%= link_to "/likes/#{twitter.id}/destroy", method: :post, remote: true do %>
+      <span class="fa fa-heart like-btn-unlike"></span>
+    <% end %>
+      <%= Like.where(twitter_id: twitter.id).count %>
+  <% else %>
+    <%= link_to "/likes/#{twitter.id}/create", method: :post, remote: true do %>
+      <span class="fa fa-heart like-btn"></span>
+    <% end %>
+      <%= Like.where(twitter_id: twitter.id).count %>
+  <% end%>
+</div>

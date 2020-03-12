@@ -7,8 +7,7 @@
   <div class="top">
     <div class="body1">Rank</div>
     <div class="body2">ユーザー名</div>
-    <div class="body3">いいね数</div>
-    <div class="body4">いいね</div>
+    <div class="body3">いいね</div>
   </div>
   <div class="flow">
   <% i = 0 %>
@@ -19,17 +18,8 @@
       <tr>
         <td><%= i %></td>
         <td class="name-width"><%= twitter.name %></td>
-        <td><%= Like.where(twitter_id: twitter.id).count %></td>
-        <td>
-        <%if Like.find_by(user_id: @current_user.id,twitter_id: twitter.id)%>
-          <%= link_to("/likes/#{twitter.id}/destroy", {method: "post"}) do %>
-            <span class="fa fa-heart like-btn-unlike"></span>
-          <% end %>
-        <% else %>
-          <%= link_to("/likes/#{twitter.id}/create", {method: "post"}) do %>
-            <span class="fa fa-heart like-btn"></span>
-          <% end %>
-        <% end%>
+        <td class="td-width">
+          <%= render 'twitters/twitters', twitter: twitter %>
         </td>
       </tr>
     </tbody>
@@ -43,17 +33,8 @@
         <tr>
           <td>-</td>
           <td class="name-width"><%= twitter.name %></td>
-          <td><%= Like.where(twitter_id: twitter.id).count %></td>
-          <td>
-            <%if Like.find_by(user_id: @current_user.id,twitter_id: twitter.id)%>
-              <%= link_to("/likes/#{twitter.id}/destroy", {method: "post"}) do %>
-                <span class="fa fa-heart like-btn-unlike"></span>
-              <% end %>
-            <% else %>
-              <%= link_to("/likes/#{twitter.id}/create", {method: "post"}) do %>
-                <span class="fa fa-heart like-btn"></span>
-              <% end %>
-            <% end%>
+          <td class="td-width">
+            <%= render 'twitters/twitters', twitter: twitter %>
           </td>
         </tr>
       </tbody>

@@ -2,7 +2,7 @@
   font-family: 'Noto Sans JP', sans-serif;
   margin: 0 auto;
   height: 447px;
-  width: 550px;
+  width: 500px;
   border-radius: 10px 10px 10px 10px;
   box-sizing: border-box;
   box-shadow: 4px 4px 1px rgba(0,0,0,0.3);
@@ -26,6 +26,10 @@ table tr td {
   box-sizing: border-box;
 }
 
+.td-width {
+  width: 150px;
+}
+
 .name-width {
   width: 250px;
 }
@@ -42,7 +46,7 @@ table tr:hover {
 .flow {
   margin: 0 auto;
   height: 410px;
-  width: 550px;
+  width: 500px;
   border-bottom: 1px solid #333;
   border-radius: 0 0 10px 10px;
   overflow: scroll;
@@ -55,7 +59,7 @@ table tr:hover {
   justify-content: center;
 }
 
-.body1, .body2, .body3, .body4 {
+.body1, .body2, .body3 {
   color: #333;
   padding: 8px 15px;
   background: #1e90ff;
@@ -72,17 +76,21 @@ table tr:hover {
 .body1:first-child {
   border-radius: 10px 0 0 0;
 }
-.body4:last-child {
+.body3:last-child {
   border-radius:0 10px 0 0;
   border-right:1px solid #666;
 }
 
-.body1, .body3, .body4 {
+.body1 {
   width: 100px;
 }
 
 .body2 {
   width: 250px;
+}
+
+.body3 {
+  width: 150px;
 }
 
 .like-btn {
