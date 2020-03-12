@@ -5,7 +5,7 @@ class TwittersController < ApplicationController
 
   def create
     Twitter.create(twitter_params)
-    redirect_to "/twitters/1"
+    redirect_to twitter_path
   end
 
   def show

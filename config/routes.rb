@@ -7,5 +7,6 @@ Rails.application.routes.draw do
   get '/logout', to: 'sessions#destroy'
   get '/login', to: 'homes#login'
   resources :macs, only: [:new, :create, :show]
-  resources :twitters, only: [:new, :create, :show]
+  resources :twitters, only: [:new, :create]
+  resource :twitter, only: :show
 end
