@@ -1,7 +1,7 @@
 $(function() {
   function addTwitter(twitter) {
     let html = `
-      <div id="tw-${twitter.id}" class="tw">
+      <div>
         ${twitter.name}
       </div>
     `;
