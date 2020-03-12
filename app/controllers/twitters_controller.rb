@@ -1,4 +1,13 @@
 class TwittersController < ApplicationController
+
+  def index
+    @twitters = Twitter.search(params[:keyword], @current_user.id)
+    respond_to do |format|
+      format.html
+      format.json
+    end
+  end
+
   def new
     @twitter = Twitter.new
   end

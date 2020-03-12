@@ -1,3 +1,13 @@
+<div class="serch_form">
+  <%= form_with url: twitters_path, local: true, method: :get, class: "search-form" do |f| %>
+    <%= f.text_field :name, class: "size", id: "user-search-field", placeholder: "@user_id" %>
+  <% end %>
+</div>
+<div id="user-search-result"></div>
+
+
+
+
 <% unless session[:user_id] %>
   <header>
     <%= link_to "TOPページへ" , login_path %>
