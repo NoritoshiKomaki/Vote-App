@@ -42,7 +42,7 @@
       <tbody>
         <tr>
           <td class="rank-width2"><%= int %></td>
-          <td class="name-width name-width2"><%= twitter.name %></td>
+          <td class="name-width name-width2"><%= link_to twitter.name, "https://twitter.com/#{twitter.name}", :target=>["_blank"] %></td>
           <td class="td-width td-width2">
             <%= render 'twitters/twitters', twitter: twitter %>
           </td>
@@ -69,7 +69,7 @@
     <tbody>
       <tr>
         <td class="rank-width"><%= i %></td>
-        <td class="name-width"><%= twitter.name %></td>
+        <td class="name-width"><%= link_to twitter.name, "https://twitter.com/#{twitter.name}", :target=>["_blank"] %></td>
         <td class="td-width">
           <span class="fa fa-heart like-btn-unlike rm-cursor"></span>
           <%= Like.where(twitter_id: twitter.id).count %>
