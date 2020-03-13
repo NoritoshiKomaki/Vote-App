@@ -11,11 +11,6 @@
   </head>
 
   <body>
-    <% if session[:user_id] %>
-      <header>
-        <%= link_to "ログアウト" ,controller: "sessions", action: "destroy" %>
-      </header>
-    <% end %>
     <%= yield %>
   </body>
 </html>

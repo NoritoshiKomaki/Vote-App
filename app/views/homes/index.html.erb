@@ -1,10 +1,16 @@
+<% if session[:user_id] %>
+  <header>
+    <%= link_to "ログアウト" ,controller: "sessions", action: "destroy" %>
+  </header>
+<% end %>
+
 <section class="back-size">
   <div class="mac display">
     <h1>投票MENU</h1>
     <div class="labels">
       <p>以下を選択してください</p>
       <%= link_to  "MacBookのスペック", new_mac_path, class: "login" %>
-      <%= link_to  "Twitterオススメユーザー", new_twitter_path, class: "login" %>
+      <%= link_to  "Twitterオススメユーザー", twitter_path, class: "login" %>
     </div>
   </div>
 </section>

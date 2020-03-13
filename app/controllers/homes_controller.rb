@@ -1,4 +1,5 @@
 class HomesController < ApplicationController
+  before_action :authenticate_user, only: :index
   def index
     if session[:user_id].nil?
       redirect_to action:'login'

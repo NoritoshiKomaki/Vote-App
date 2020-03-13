@@ -1,6 +1,5 @@
 class MacsController < ApplicationController
-  def index
-  end
+  before_action :authenticate_user, only: [:new, :create]
 
   def new
     @mac = Mac.new

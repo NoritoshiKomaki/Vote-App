@@ -1,16 +1,19 @@
-<h1 class="title">Welcome</h1>
-<h1 class="title title-middle">to</h1>
-<h1 class="title">VoteApp!!</h1>
-<div class="mac display">
-  <h1>MENU</h1>
-  <p>以下を選択して結果を閲覧できます</p>
-  <div class="labels">
-    <%= link_to  "MacBookのスペック", mac_path(1), class: "login" %>
-    <%= link_to  "Twitterオススメユーザー", twitter_path(1), class: "login" %>
-    <p>ログインして投票しよう！</p>
-    <div class="vote">
-    <i class="fab fa-twitter"></i>
-    <%= link_to "Twitterでログイン" ,"/auth/twitter", method: :post, class: "login-font" %>
+<section class="main-contain">
+  <div class="main">
+    <h1 class="title">Welcome</h1>
+    <h1 class="title title-middle">to</h1>
+    <h1 class="title">VoteApp!!</h1>
+    <div class="mac display">
+      <h1>MENU</h1>
+      <p>以下を選択して結果を閲覧できます</p>
+      <div class="labels">
+        <%= link_to  "MacBookのスペック", mac_path(1), class: "login" %>
+        <%= link_to  "Twitterオススメユーザー", edit_twitter_path, class: "login" %>
+        <p>ログインして投票しよう！</p>
+        <div class="vote">
+        <i class="fab fa-twitter"></i>
+        <%= link_to "Twitterでログイン" ,"/auth/twitter", method: :post, class: "login-font" %>
+      </div>
     </div>
   </div>
-</div>
+</section>

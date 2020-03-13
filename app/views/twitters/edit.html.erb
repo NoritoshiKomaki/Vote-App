@@ -1,0 +1,33 @@
+<% unless session[:user_id] %>
+  <header>
+    <%= link_to "TOPページへ" , login_path %>
+  </header>
+<% end %>
+
+<section class="setting">
+<div class="rank-title">ユーザーランキング</div>
+<section class="shadow">
+  <div class="top">
+    <div class="body1">Rank</div>
+    <div class="body2">ユーザー名</div>
+    <div class="body3">いいね</div>
+  </div>
+  <div class="flow2">
+  <% i = 0 %>
+  <% @twitters.each do |twitter| %>
+  <% i += 1 %>
+  <table>
+    <tbody>
+      <tr>
+        <td><%= i %></td>
+        <td class="name-width"><%= twitter.name %></td>
+        <td class="td-width">
+          <span class="fa fa-heart like-btn-unlike rm-cursor"></span>
+          <%= Like.where(twitter_id: twitter.id).count %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <% end %>
+  </section>
+  </section>

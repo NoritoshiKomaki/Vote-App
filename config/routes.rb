@@ -8,5 +8,5 @@ Rails.application.routes.draw do
   get '/login', to: 'homes#login'
   resources :macs, only: [:new, :create, :show]
   resources :twitters, only: [:index, :new, :create]
-  resource :twitter, only: :show
+  resource :twitter, only: [:show, :edit]
 end

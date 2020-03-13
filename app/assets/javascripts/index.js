@@ -1,20 +1,20 @@
 $(function() {
   function addTwitter(twitter) {
     let html = `
-      <div>
+      <div class="tw" id="${twitter.id}">
         ${twitter.name}
       </div>
     `;
-    $("#user-search-result").append(html);
+    $("#twitter-result").append(html);
   }
   
   function addNoTwitter() {
     let html = `
-      <div>
-        No User
+      <div class="new">
+        新規登録してください
       </div>
     `;
-    $("#user-search-result").append(html);
+    $("#twitter-result").append(html);
   }
 
   $("#user-search-field").on("keyup", function() {
@@ -26,7 +26,7 @@ $(function() {
       dataType: 'json'
     })
     .done(function(twitters) {
-      $('#user-search-result').empty();
+      $('#twitter-result').empty();
       if (twitters.length !== 0) {
         twitters.forEach(function(twitter){
           addTwitter(twitter);
@@ -40,5 +40,21 @@ $(function() {
     .fail(function() {
       alert('error');
     });
+  });
+  $(document).on('click', '.tw', function() {
+    
+    var id = $(this).attr('id');
+    $('.flow').animate({ scrollTop: 41 * (id - 1) });
+  });
+  $('#sw-1').click(function() {
+    $('.table-2').fadeOut(500);
+    $('.table-1').delay(500).hide().fadeIn();
+  });
+  $('#sw-2').click(function() {
+    $('.table-1').fadeOut(500);
+    $('.table-2').delay(500).hide().fadeIn();
+  });
+  $(window).on('load', () => {
+    $('.main').fadeIn(2000);
   });
 });

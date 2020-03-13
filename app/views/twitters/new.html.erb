@@ -1,3 +1,9 @@
+<% if session[:user_id] %>
+  <header>
+    <%= link_to "ログアウト" ,controller: "sessions", action: "destroy" %>
+  </header>
+<% end %>
+
 <%= form_with model: @twitter, local: true do |f| %>
   <section class="back-size">
     <div class="mac display">

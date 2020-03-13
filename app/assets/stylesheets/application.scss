@@ -11,6 +11,7 @@
 header {
   display: flex;
   justify-content: flex-end;
+  margin-right: 100px;
 }
 
 header a {
@@ -21,9 +22,9 @@ header a {
   border: 3px solid mediumvioletred;
   border-radius: 50px;
   box-shadow: 2px 2px gray;
-  font-size: 24px;
+  font-size: 20px;
   padding: 0 10px;
-  margin: 20px 100px 0 0;
+  margin: 20px 20px 0 0;
 }
 
 header a:hover {
