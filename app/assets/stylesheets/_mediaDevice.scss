@@ -1,0 +1,99 @@
+@media screen and (max-width: 600px) {
+  .mac {
+    width: 80%;
+    padding: 20px 20px;
+    .vote {
+      font-size: 24px;
+    }
+  }
+
+  header {
+    margin: 0 auto;
+  }
+
+  .select-button {
+    flex-direction: column;
+    .far {
+      display: none;
+    }
+    #btn-air, #btn-13, #btn-16 {
+      display: table;
+      margin: 0 auto;
+      margin-bottom: 10px;
+    }
+  }
+
+  .chart-flex {
+    width: 100%;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .container {
+    width: 100%;
+  }
+
+  .top {
+    width: 350px;
+  }
+
+  .shadow {
+    width: 350px;
+  }
+
+  .flow2 {
+    width: 350px;
+    margin: 0;
+  }
+
+  .flow {
+    width: 350px;
+    margin: 0;
+  }
+
+  .rank-width {
+    width: 73px;
+  }
+
+  .name-width {
+    width: 170px;
+  }
+
+  .td-width {
+    width: 107px;
+  }
+
+  .rank-title {
+    font-size: 24px;
+  }
+
+  .header {
+    margin: 0 auto;
+  }
+
+  .choise .far {
+    display: none;
+  }
+
+  .choise {
+    flex-direction: column;
+  }
+
+  .lank {
+    display: table;
+    margin: 0 auto;
+    margin-bottom: 10px;
+  }
+
+  .rank-width2 {
+    width: 90px;
+  }
+
+  .name-width2 {
+    width: 160px;
+  }
+
+  .td-width2 {
+    width: 100px;
+  }
+}

@@ -5,7 +5,7 @@
 <% end %>
 
 <% if session[:user_id] %>
-  <header>
+  <header class="header">
     <%= link_to "Mac詳細へ", mac_path(1) %>
     <%= link_to "ログアウト" ,controller: "sessions", action: "destroy" %>
   </header>
@@ -41,9 +41,9 @@
     <table class="<%= twitter.id %>">
       <tbody>
         <tr>
-          <td><%= int %></td>
-          <td class="name-width"><%= twitter.name %></td>
-          <td class="td-width">
+          <td class="rank-width2"><%= int %></td>
+          <td class="name-width name-width2"><%= twitter.name %></td>
+          <td class="td-width td-width2">
             <%= render 'twitters/twitters', twitter: twitter %>
           </td>
         </tr>
@@ -68,7 +68,7 @@
   <table>
     <tbody>
       <tr>
-        <td><%= i %></td>
+        <td class="rank-width"><%= i %></td>
         <td class="name-width"><%= twitter.name %></td>
         <td class="td-width">
           <span class="fa fa-heart like-btn-unlike rm-cursor"></span>
