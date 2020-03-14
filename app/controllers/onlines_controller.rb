@@ -1,11 +1,12 @@
 class OnlinesController < ApplicationController
+  before_action :authenticate_user, only: [:new, :create, :show]
   def new
     @online = Online.new
   end
 
   def create
     Online.create(online_params)
-    redirect_to root_path
+    redirect_to online_path
   end
 
   def show
@@ -16,6 +17,7 @@ class OnlinesController < ApplicationController
 
   def edit
     @onlines = Online.find(Like2.group(:online_id).order('count(online_id) desc').pluck(:online_id))
+    @onlines2 = Online.all
   end
 
   private

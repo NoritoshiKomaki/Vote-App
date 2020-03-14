@@ -10,7 +10,7 @@
   <div class="top">
     <div class="body1">Rank</div>
     <div class="body2">ユーザー名</div>
-    <div class="body3">いいね</div>
+    <div class="body3">いいね数</div>
   </div>
   <div class="flow2">
   <% i = 0 %>
@@ -22,7 +22,6 @@
         <td class="rank-width"><%= i %></td>
         <td class="name-width"><%= link_to twitter.name, "https://twitter.com/#{twitter.name}", :target=>["_blank"] %></td>
         <td class="td-width">
-          <span class="fa fa-heart like-btn-unlike rm-cursor"></span>
           <%= Like.where(twitter_id: twitter.id).count %>
         </td>
       </tr>

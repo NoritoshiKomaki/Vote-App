@@ -1,6 +1,6 @@
 <% if session[:user_id] %>
   <header class="header">
-    <%= link_to "ユーザー投票へ", twitter_path %>
+    <%= link_to "投票トップ", homes_path %>
     <%= link_to "ログアウト" ,controller: "sessions", action: "destroy" %>
   </header>
 <% end %>

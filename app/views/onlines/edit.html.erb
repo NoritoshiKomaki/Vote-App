@@ -1,7 +1,6 @@
-<% if session[:user_id] %>
-  <header class="header">
-    <%= link_to "投票トップ", homes_path %>
-    <%= link_to "ログアウト" ,controller: "sessions", action: "destroy" %>
+<% unless session[:user_id] %>
+  <header>
+    <%= link_to "TOPページへ" , login_path %>
   </header>
 <% end %>
 <div class="pic">
@@ -25,7 +24,7 @@
   <div class="top">
     <div class="body1">Rank</div>
     <div class="body2">オススメ教材</div>
-    <div class="body3">いいね</div>
+    <div class="body3">いいね数</div>
   </div>
   <div class="flow">
     <% i = 0 %>
@@ -37,7 +36,7 @@
             <td class="rank-width"><%= i %></td>
             <td class="name-width"><%= online.name %></td>
             <td class="td-width">
-              <%= render 'onlines/onlines', online: online %>
+              <%= Like2.where(online_id: online.id).count %>
             </td>
           </tr>
         </tbody>
@@ -51,7 +50,7 @@
               <td class="rank-width">-</td>
               <td class="name-width"><%= online.name %></td>
               <td class="td-width">
-                <%= render 'onlines/onlines', online: online %>
+                <%= Like2.where(online_id: online.id).count %>
               </td>
             </tr>
           </tbody>
