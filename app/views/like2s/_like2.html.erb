@@ -1,0 +1,13 @@
+<div class="like2-link" id="like2-link-<%= online.id %>">
+  <%if Like2.find_by(user_id: @current_user.id,online_id: online.id)%>
+    <%= link_to "/like2s/#{online.id}/destroy", method: :post, remote: true do %>
+      <span class="fa fa-heart like-btn-unlike"></span>
+    <% end %>
+      <%= Like2.where(online_id: online.id).count %>
+  <% else %>
+    <%= link_to "/like2s/#{online.id}/create", method: :post, remote: true do %>
+      <span class="fa fa-heart like-btn"></span>
+    <% end %>
+      <%= Like2.where(online_id: online.id).count %>
+  <% end%>
+</div>

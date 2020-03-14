@@ -1,0 +1,51 @@
+<section class="shadow">
+  <div class="top">
+    <div class="body1">Number</div>
+    <div class="body2">ユーザー名</div>
+    <div class="body3">いいね</div>
+  </div>
+  <div class="flow">
+  <% int = 0 %>
+  <% @onlines2.each do |online| %>
+  <% int += 1 %>
+    <table class="<%= online.id %>">
+      <tbody>
+        <tr>
+          <td class="rank-width2"><%= int %></td>
+          <td class="name-width name-width2"><%= online.name %></td>
+          <td class="td-width td-width2">
+            <%= render 'onlines/onlines', online: online %>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  <% end %>
+</section>
+</div>
+
+<div class="table-2 hide">
+<div class="new ">ランキングではいいねできません</div>
+<section class="shadow">
+  <div class="top">
+    <div class="body1">Rank</div>
+    <div class="body2">ユーザー名</div>
+    <div class="body3">いいね</div>
+  </div>
+  <div class="flow2">
+  <% i = 0 %>
+  <% @onlines.each do |online| %>
+  <% i += 1 %>
+  <table>
+    <tbody>
+      <tr>
+        <td class="rank-width"><%= i %></td>
+        <td class="name-width"><%= online.name %></td>
+        <td class="td-width">
+          <span class="fa fa-heart like-btn-unlike rm-cursor"></span>
+          <%= Like2.where(online_id: online.id).count %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <% end %>
+  </section>

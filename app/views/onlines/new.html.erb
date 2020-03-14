@@ -1,0 +1,11 @@
+<%= form_with model: @online, local: true do |f| %>
+  <section class="back-size">
+    <div class="mac display">
+      <h1>オンライン教材</h1>
+      <div class="select">オススメのオンライン教材を教えてください</div>
+      <div class="b-color">
+        <%= f.text_field :name, class: "size", placeholder: "For example Progate" %>
+      <%= f.submit "SEND", class: "button send" %>
+    </div>
+  </section>
+<% end %>

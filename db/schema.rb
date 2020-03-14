@@ -10,7 +10,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_03_10_033434) do
+ActiveRecord::Schema.define(version: 2020_03_14_121220) do
+
+  create_table "like2s", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.bigint "user_id"
+    t.bigint "online_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["online_id"], name: "index_like2s_on_online_id"
+    t.index ["user_id"], name: "index_like2s_on_user_id"
+  end
 
   create_table "likes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -28,6 +37,14 @@ ActiveRecord::Schema.define(version: 2020_03_10_033434) do
     t.integer "storage"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "onlines", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["user_id"], name: "index_onlines_on_user_id"
   end
 
   create_table "twitters", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -49,7 +66,10 @@ ActiveRecord::Schema.define(version: 2020_03_10_033434) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "like2s", "onlines"
+  add_foreign_key "like2s", "users"
   add_foreign_key "likes", "twitters"
   add_foreign_key "likes", "users"
+  add_foreign_key "onlines", "users"
   add_foreign_key "twitters", "users"
 end
