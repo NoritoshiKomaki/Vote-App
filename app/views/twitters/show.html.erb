@@ -14,18 +14,18 @@
 <section class="font-change">
   <div class="choise">
     <i class="far fa-hand-point-right"></i>
-  <div class="lank" id="sw-1">いいねする</div>
-  <div class="lank" id="sw-2">ランキング</div>
-    <%= link_to  "ユーザー新規登録", new_twitter_path, class: "lank" %>
+    <div class="lank" id="sw-1">いいねする</div>
+    <div class="lank" id="sw-2">ランキング</div>
+    <%= link_to  "新規登録", new_twitter_path, class: "lank" %>
   </div>
 
   <div class="table-1">
     <div class="search_form">
       <div class="scroll">検索結果を選択するとスクロールします</div>
-        <%= form_with url: twitters_path, local: true, method: :get, class: "search-form" do |f| %>
-          <%= f.text_field :name, class: "size", id: "user-search-field", placeholder: "search", autocomplete: 'off' %>
-        <% end %>
-      </div>
+      <%= form_with url: twitters_path, local: true, method: :get, class: "search-form" do |f| %>
+        <%= f.text_field :name, class: "size", id: "user-search-field", placeholder: "search", autocomplete: 'off' %>
+      <% end %>
+    </div>
     <div id="twitter-result"></div>
   
     <section class="shadow">
@@ -34,48 +34,48 @@
         <div class="body2">ユーザー名</div>
         <div class="body3">いいね</div>
       </div>
-  <div class="flow">
-    <% int = 0 %>
-    <% @twitters2.each do |twitter| %>
-    <% int += 1 %>
-      <table class="<%= twitter.id %>">
-        <tbody>
-          <tr>
-            <td class="rank-width2"><%= int %></td>
-            <td class="name-width name-width2"><%= link_to twitter.name, "https://twitter.com/#{twitter.name}", :target=>["_blank"] %></td>
-            <td class="td-width td-width2">
-              <%= render 'twitters/twitters', twitter: twitter %>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    <% end %>
-  </div>
-</section>
+      <div class="flow">
+        <% int = 0 %>
+        <% @twitters2.each do |twitter| %>
+        <% int += 1 %>
+          <table class="<%= twitter.id %>">
+            <tbody>
+              <tr>
+                <td class="rank-width2"><%= int %></td>
+                <td class="name-width name-width2"><%= link_to twitter.name, "https://twitter.com/#{twitter.name}", :target=>["_blank"] %></td>
+                <td class="td-width td-width2">
+                  <%= render 'twitters/twitters', twitter: twitter %>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        <% end %>
+    </section>
+      </div>
 
 <div class="table-2 hide">
-  <section class="shadow">
-    <div class="top">
-      <div class="body1">Rank</div>
-      <div class="body2">ユーザー名</div>
-      <div class="body3">いいね数</div>
-    </div>
-    <div class="flow2">
-      <% i = 0 %>
-      <% @twitters.each do |twitter| %>
-      <% i += 1 %>
-        <table>
-          <tbody>
-            <tr>
-              <td class="rank-width"><%= i %></td>
-              <td class="name-width"><%= link_to twitter.name, "https://twitter.com/#{twitter.name}", :target=>["_blank"] %></td>
-              <td class="td-width">
-                <%= Like.where(twitter_id: twitter.id).count %>
-              </td>
-            </tr>
-          </tbody>
-        </table>
-      <% end %>
-    </section>
+<section class="shadow">
+  <div class="top">
+    <div class="body1">Rank</div>
+    <div class="body2">ユーザー名</div>
+    <div class="body3">いいね</div>
   </div>
-</section>
+  <div class="flow2">
+  <% i = 0 %>
+  <% @twitters.each do |twitter| %>
+  <% i += 1 %>
+  <table>
+    <tbody>
+      <tr>
+        <td class="rank-width"><%= i %></td>
+        <td class="name-width"><%= link_to twitter.name, "https://twitter.com/#{twitter.name}", :target=>["_blank"] %></td>
+        <td class="td-width">
+          <%= Like.where(twitter_id: twitter.id).count %>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <% end %>
+  </section>
+  </div>
+  </section>
