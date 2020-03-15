@@ -1,5 +1,10 @@
 class OnlinesController < ApplicationController
   before_action :authenticate_user, only: [:new, :create, :show]
+
+  def index
+    @users = User.all
+  end
+  
   def new
     @online = Online.new
   end

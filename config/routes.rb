@@ -11,6 +11,6 @@ Rails.application.routes.draw do
   resources :macs, only: [:new, :create, :show]
   resources :twitters, only: [:index, :new, :create]
   resource :twitter, only: [:show, :edit]
-  resources :onlines, only: [:new, :create]
+  resources :onlines, only: [:index, :new, :create]
   resource :online, only: [:show, :edit]
 end
