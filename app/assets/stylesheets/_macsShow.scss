@@ -28,9 +28,11 @@ tspan {
 }
 
 .chart-size {
-  margin: 0 auto;
+  margin: 20px auto;
   width: 67%;
   height: 330px;
+  background: white;
+  border-radius: 10px;
 }
 
 .highcharts-root {
@@ -48,6 +50,7 @@ tspan {
     font-size: 24px;
     font-weight: bold;
     z-index: 2;
+    background: white;
   }
   .far {
     font-size: 36px;
