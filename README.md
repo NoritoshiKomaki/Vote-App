@@ -48,12 +48,91 @@ Twitterアカウントでのログインが完了するとこのページに移�
 検索フォームにキーワードを入力すると候補が表示され、クリックすると一番上にスライドします。<br>
 また、ユーザー名をクリックすると選択したユーザーのTwitterページに移動します。
 
-![twitter](https://user-images.githubusercontent.com/61044016/79305770-f7c00080-7f2e-11ea-9d31-8363346d44e6.gif)
+![twitter](https://user-images.githubusercontent.com/61044016/79305770-f7c00080-7f2e-11ea-9d31-8363346d44e6.gif)<br><br>
 
-設定された文字数を打ち終えるとタイピング結果が表示されます。
+## MacBookのスペック投票ページ
 
-<img width="1000" alt="スクリーンショット 2020-04-15 13 15 27" src="https://user-images.githubusercontent.com/61044016/79298370-f0dbc280-7f1b-11ea-8e0c-905abc0b996a.png"><br><br>
+指示に従って使用中のMacBookのスペックを投票する事ができます。
 
-仮想エディタのコードはコピー＆ペーストする事ができます。
+![mac](https://user-images.githubusercontent.com/61044016/79311236-170f5b80-7f38-11ea-8c40-b236b4b12f1d.gif)<br><br>
 
-<img width="1000" alt="スクリーンショット 2020-04-15 13 16 07" src="https://user-images.githubusercontent.com/61044016/79298380-f46f4980-7f1b-11ea-9cf0-1ca23314a8f1.png">
+投票を完了すると投票結果のページに移動します。
+![mac2](https://user-images.githubusercontent.com/61044016/79311366-49b95400-7f38-11ea-92bc-8c7d03a82b0a.gif)<br><br>
+
+# DB設計
+
+## usersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|provider|string||
+|uid|string||
+|nickname|string||
+|name|string||
+|image_url|string||
+|description|string||
+
+### Association
+- has_many :groups, through: members
+- has_many :members
+- has_many :messages
+
+## twittersテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|user_id|integer|foreign_key: true|
+
+### Association
+- has_many :users, through: members
+- has_many :members
+- has_many :messages
+
+## macsテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|spec|integer||
+|cpu|integer||
+|memory|integer||
+|storage|integer||
+
+### Association
+- berongs_to :user
+- berongs_to :group
+
+## onlinesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|name|string||
+|user_id|integer|foreign_key :true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
+## likesテーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|foreign_key: true|
+|twitter_id|integer|foreign_key :true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+## likes2テーブル
+
+|Column|Type|Options|
+|------|----|-------|
+|user_id|integer|foreign_key: true|
+|online_id|integer|foreign_key :true|
+
+### Association
+- belongs_to :user
+- belongs_to :group
+
+
+
