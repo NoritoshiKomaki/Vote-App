@@ -73,9 +73,8 @@ Twitterアカウントでのログインが完了するとこのページに移�
 |description|string||
 
 ### Association
-- has_many :groups, through: members
-- has_many :members
-- has_many :messages
+- has_many :twitters, dependent: :destroy
+- has_many :twitters, through: :likes
 
 ## twittersテーブル
 
@@ -85,9 +84,11 @@ Twitterアカウントでのログインが完了するとこのページに移�
 |user_id|integer|foreign_key: true|
 
 ### Association
-- has_many :users, through: members
-- has_many :members
-- has_many :messages
+- belongs_to :user
+- has_many :users, through: :likes
+
+### Validation
+- validates :name, uniqueness: true, presence: true, length: { maximum: 16 }
 
 ## macsテーブル
 
@@ -98,10 +99,6 @@ Twitterアカウントでのログインが完了するとこのページに移�
 |memory|integer||
 |storage|integer||
 
-### Association
-- berongs_to :user
-- berongs_to :group
-
 ## onlinesテーブル
 
 |Column|Type|Options|
@@ -111,7 +108,10 @@ Twitterアカウントでのログインが完了するとこのページに移�
 
 ### Association
 - belongs_to :user
-- belongs_to :group
+- has_many :users: :like2s
+
+### Validation
+- validates :name, uniqueness: true, presence: true, length: { maximum: 20 }
 
 ## likesテーブル
 
@@ -122,7 +122,7 @@ Twitterアカウントでのログインが完了するとこのページに移�
 
 ### Association
 - belongs_to :user
-- belongs_to :group
+- belongs_to :twitter
 ## likes2テーブル
 
 |Column|Type|Options|
@@ -132,7 +132,7 @@ Twitterアカウントでのログインが完了するとこのページに移�
 
 ### Association
 - belongs_to :user
-- belongs_to :group
+- belongs_to :online
 
 
 
