@@ -10,15 +10,12 @@
 @import "onlineShow";
 @import "mediaDevice";
 
-body {
+body, html {
   font-family: 'Noto Sans JP', sans-serif;
   color: #333;
   text-shadow: #333 0 0 1px;
-}
-
-.back-opacity {
-  height: 100vh;
-  background: rgba(255,255,255,0.2);
+  background: #eee;
+  height: 100%;
 }
 
 header {

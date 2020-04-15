@@ -17,7 +17,7 @@
 
 言語一覧が表示されていますので、選択すると各言語のゲーム一覧ページへ移動します。<br><br>
 
-<img width="1440" style="border: 1px solid black;" alt="スクリーンショット 2020-04-15 15 06 23" src="https://user-images.githubusercontent.com/61044016/79303841-e1b04100-7f2a-11ea-8acb-79f2e045cbdf.png">
+<img width="1440" alt="スクリーンショット 2020-04-15 15 06 23" src="https://user-images.githubusercontent.com/61044016/79303841-e1b04100-7f2a-11ea-8acb-79f2e045cbdf.png">
 <br><br>
 
 ## ゲーム選択ページ
