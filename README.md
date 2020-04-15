@@ -1,7 +1,7 @@
 # README
 
 # タイトル:VoteApp
-<img width="1000" alt="スクリーンショット 2020-04-15 11 55 24" src="https://user-images.githubusercontent.com/61044016/79294206-912bea00-7f10-11ea-9806-078421545e16.png"><br><br><br>
+<img width="1440" alt="スクリーンショット 2020-04-15 15 21 16" src="https://user-images.githubusercontent.com/61044016/79304711-e83fb800-7f2c-11ea-8436-4f4e008e9b8a.png"><br><br><br>
 
 # アプリの説明
 このアプリはプログラミング学習関連の投票アプリです。<br>
@@ -17,7 +17,7 @@
 
 言語一覧が表示されていますので、選択すると各言語のゲーム一覧ページへ移動します。<br><br>
 
-<img width="1440" alt="スクリーンショット 2020-04-15 15 06 23" src="https://user-images.githubusercontent.com/61044016/79303841-e1b04100-7f2a-11ea-8acb-79f2e045cbdf.png">
+<img width="1440" alt="スクリーンショット 2020-04-15 15 21 16" src="https://user-images.githubusercontent.com/61044016/79304711-e83fb800-7f2c-11ea-8436-4f4e008e9b8a.png">
 <br><br>
 
 ## ゲーム選択ページ
