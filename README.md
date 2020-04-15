@@ -22,15 +22,16 @@
 
 ## ゲーム選択ページ
 
-ゲーム一覧が表示されていますので、選択すると各ゲームのタイピングゲームページへ移動します。
+選択して各項目の投票結果を閲覧する事ができます。
+投票するにはTwitterアカウントでのログインが必要です。
 
 <img width="1000" alt="スクリーンショット 2020-04-15 13 13 26" src="https://user-images.githubusercontent.com/61044016/79298360-e8838780-7f1b-11ea-9564-55ac6f0e01fd.png"><br><br>
 
-## タイピングゲームページ
+## 投票ページ（ログイン後）
 
 クリックするとゲームが開始します。
 
-<img width="1000" alt="スクリーンショット 2020-04-15 13 13 46" src="https://user-images.githubusercontent.com/61044016/79298365-ee796880-7f1b-11ea-9a31-970fe498b4d5.png"><br><br>
+![twitter](https://user-images.githubusercontent.com/61044016/79305770-f7c00080-7f2e-11ea-9d31-8363346d44e6.gif)
 
 設定された文字数を打ち終えるとタイピング結果が表示されます。
 
