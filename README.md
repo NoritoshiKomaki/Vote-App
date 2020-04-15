@@ -25,19 +25,20 @@
 Twitterアカウントでのログインが完了するとこのページに移動します。
 投票したい項目を選択すると各投票ページに移動します。
 
-<img width="1440" alt="スクリーンショット 2020-04-15 15 27 23" src="https://user-images.githubusercontent.com/61044016/79306440-2c808780-7f30-11ea-985e-40f8e8215d0c.png"><br><br>
+<img width="1440" alt="スクリーンショット 2020-04-15 15 27 23" src="https://user-images.githubusercontent.com/61044016/79309550-6f912980-7f35-11ea-8ca0-057b31b0974a.png">
+<br><br>
 
 ## オススメオンライン教材投票ページ
 
 すでに投稿されている教材をいいね機能で投票する事ができます。
 自動で投票数が多い順にソートされます。
 
-<img width="1440" alt="スクリーンショット 2020-04-15 15 27 46" src="https://user-images.githubusercontent.com/61044016/79306200-c6940000-7f2f-11ea-825d-9070d1ea8c64.png"><br><br>
+<img width="1440" alt="スクリーンショット 2020-04-15 15 27 46" src="https://user-images.githubusercontent.com/61044016/79309553-70c25680-7f35-11ea-9297-58543aa3319d.png"><br><br>
 
 教材を新規登録ボタンを押すとこの画面に移動します。
 投票した教材が無い場合、ここから新規投稿する事ができます。
 
-<img width="1440" alt="スクリーンショット 2020-04-15 15 27 56" src="https://user-images.githubusercontent.com/61044016/79306206-c98ef080-7f2f-11ea-9864-a0a47af6c404.png"><br><br>
+<img width="1440" alt="スクリーンショット 2020-04-15 15 27 56" src="https://user-images.githubusercontent.com/61044016/79309558-7324b080-7f35-11ea-8f62-188879f9f225.png"><br><br>
 
 ## オススメTwitterユーザー投票機能
 
