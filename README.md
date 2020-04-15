@@ -12,7 +12,7 @@
 ・学習ロードマップの投票項目を追加<br><br><br>
 
 # 本番環境URL
-https://vote--app.herokuapp.com/
+https://vote--app.herokuapp.com/<br><br><br>
 
 # 各ページ説明
 
